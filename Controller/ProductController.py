@@ -12,19 +12,7 @@ class ProductController():
 
     def __init__(self):
         self.productService = ProductServiceImpl()
-
-class Create(ProductController):
-    def create_product(self):
         self.productService.add_Product()
-
-class update(ProductController):
-    def update_product(self):
         self.productService.update_Product()
-
-class delete(ProductController):   
-    def delete_product(self):
         self.productService.delete_Product()
-
-class search(ProductController):
-    def search_product(self):
         self.productService.search_Product()

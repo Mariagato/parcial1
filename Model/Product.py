@@ -1,17 +1,16 @@
 from enum import Enum
 
+from ProductType import ProductType
+
 #La categoria de un product fue tomada como un enum.
 
-class Category(Enum):
-    ELECTRONICACCESSORY = 1
-    DECORATIVEACCESSOR = 2
-    COMPUTER = 3
-    PHONE = 4
 
 class Product:
+
+    product: ProductType
     
 
-    def __init__(self, name, sku, description, price, material, color, available_stock, creation_date, update_date):
+    def __init__(self, name, sku, description, price, material, color, available_stock, creation_date, update_date, productType):
         self.name = name
         self.sku = sku
         self.description = description
@@ -21,6 +20,10 @@ class Product:
         self.available_stock = available_stock
         self.creation_date = creation_date
         self.update_date = update_date
-        self.category = Category
+        self.productType = ProductType
+        
+    def product_method(self):
+        print("I am a product")
+        self.productType.product_method()
 
     

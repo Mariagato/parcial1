@@ -13,7 +13,7 @@ class User:
         self.phoneNumber = phoneNumber
         self.email = email
         self.userType = userType
-
-    def hello(self):
-        print("HIII")
-        self.userType.hello()
+    
+    def user_method(self):
+        print("I am a product")
+        self.UserType.user_method()
